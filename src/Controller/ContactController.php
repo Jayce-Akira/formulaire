@@ -88,8 +88,9 @@ class ContactController extends AbstractController
                     // dd($reception);
                     $em->persist($reception);
                     $em->flush();
-                    dump($email);
+                    // dump($email);die;
                     $mailer->send($email);
+                    // dump($email);die;
                    
 
                 $this->addFlash('success', 'Votre formulaire a été soumis avec succès !');
